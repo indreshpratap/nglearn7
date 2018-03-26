@@ -1,0 +1,22 @@
+.box {
+    border: 2px solid lightblue;
+    background: lightsalmon;
+}
+
+.padding {
+    padding:10px;
+}
+
+.notes {
+    padding:5px;
+    border:1px solid;
+}
+
+.success {
+    background-color: lightgreen;
+    color: darkgreen;
+}
+
+.ib {
+    display: inline-block;
+}
