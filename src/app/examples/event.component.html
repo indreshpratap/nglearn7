@@ -1,0 +1,28 @@
+<button (click)="alertMsg()">Alert Message</button>
+
+<button (dblclick)="alertMsg()">Dbl Click Alert</button>
+
+<div (mouseover)="setContent()" (mouseout)="removeContent($event)" style="border:1px solid;padding:4px; width:300px;height:200px">
+  {{content}}</div>
+
+<button (click)="processEvent($event,data)">Get Event</button>
+
+<input (keydown)="processKey($event)" placeholder="Enter text">
+
+<button (click)="changeText()">{{btnText}}</button>
+
+<div [class.upvote]="counter>5" [class.downvote]="counter<=5">
+  Like : {{counter}}
+</div>
+
+<button (click)="vote(true)">Like</button>
+<button (click)="vote(false)">Dislike</button>
+<hr>
+<b>Two way binding</b>
+<input type="text" [(ngModel)]="username" placeholder="Input username">
+Username: {{username}}
+
+<input type="checkbox"  [(ngModel)]="flag">
+Flag:{{flag}}
+
+

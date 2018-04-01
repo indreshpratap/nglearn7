@@ -1,29 +1,3 @@
 <app-header></app-header>
-
-{{ description }}
-
-<div>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid est molestias exercitationem repellat earum quam, nobis
-  nisi quis harum hic minus, libero iusto porro excepturi architecto ex explicabo, commodi deserunt!
-  <b>{{ description }}</b>
-</div>
-<div>You have colors: {{colors}}</div>
-
-<!-- inline value  -->
-<div [id]="'divid'">
-  User details is {{user}} name : {{user.username}}
-</div>
-your boolean flag = {{flag}}
-
-<!-- [] Property binding -->
-
-<input [value]="description">
-
-<div [id]="ref"> this div has ref as id</div>
-
-<div [class]="cls">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam voluptas tempore, beatae doloribus ducimus aliquam ratione cum? Porro nihil sequi, veniam error necessitatibus a sunt, ipsa praesentium incidunt esse quam!
-</div>
-<div class="notes ib" [ngClass]="state_cls">
-    Your state msg will appear here
-</div>
+<!-- <app-binding></app-binding> -->
+<app-event></app-event>
