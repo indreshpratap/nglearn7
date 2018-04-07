@@ -1,0 +1,11 @@
+<h5>Looping</h5>
+
+
+<input placeholder="Add New Color" [(ngModel)]="inputColor"> <button (click)="add()">Add Color</button>
+<ul>
+  <li *ngFor="let c of colors;let i=index;let first=first;let last=last;let od=odd;let ev=even" [class.odd]="od">
+  <span [ngClass]="{first:first,last:last}">  {{ i+1 }} -> {{ c }} First:{{first}} Last:{{ last}} Even:{{ev}} Odd:{{od}}</span>
+  </li>
+
+
+</ul>
