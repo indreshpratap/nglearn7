@@ -2,10 +2,23 @@
 
 
 <input placeholder="Add New Color" [(ngModel)]="inputColor"> <button (click)="add()">Add Color</button>
+<input type="checkbox" name="" id="" [(ngModel)]="onTop"> Push On Top
+
 <ul>
   <li *ngFor="let c of colors;let i=index;let first=first;let last=last;let od=odd;let ev=even" [class.odd]="od">
   <span [ngClass]="{first:first,last:last}">  {{ i+1 }} -> {{ c }} First:{{first}} Last:{{ last}} Even:{{ev}} Odd:{{od}}</span>
+  <button (click)="remove(i)">x</button>
   </li>
 
 
 </ul>
+
+<h3>Completed </h3>
+<table>
+  <tbody>
+    <tr *ngFor="let item of completed;let indx = index">
+      <td>{{indx+1}}</td>
+      <td>{{item}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,36 @@
+<h3>If Condition</h3>
+
+
+<b>Content Title</b>
+<p>This is limited info</p>
+<button (click)="toggle()">{{showDetails?'Hide':'View'}} Details</button>
+<p *ngIf="showDetails">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque eligendi, esse et recusandae modi libero itaque consectetur
+  molestias expedita quae est non suscipit deserunt rem quibusdam laborum provident nulla porro! Lorem ipsum dolor sit amet
+  consectetur adipisicing elit. Quasi, temporibus voluptatibus voluptatum officiis libero quo quis minima, explicabo ad iusto
+  veritatis. Minima velit itaque adipisci aspernatur, placeat suscipit voluptates fuga? Lorem ipsum dolor sit amet consectetur,
+  adipisicing elit. Molestias quaerat dolores iste unde maxime, fuga voluptatibus quidem quibusdam fugiat ducimus, minus
+  necessitatibus voluptas nesciunt consequatur temporibus vitae, harum illo dolorem.
+</p>
+
+<button (click)="state=1">Info</button>
+<button (click)="state=2">Success</button>
+<button (click)="state=3">Warning</button>
+<button (click)="state=0">Clear</button>
+<div *ngIf="state===1" style="background-color:lightblue" class="note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quidem ad commodi, nostrum numquam voluptate. Minima quasi maiores
+  quibusdam, pariatur, non blanditiis laboriosam consequuntur tempora, sint labore facilis obcaecati alias?</div>
+<div *ngIf="state===2" style="background-color:lightgreen" class="note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni eligendi aperiam voluptates, saepe voluptatibus minima odit,
+  nisi ipsa possimus exercitationem quae. Nobis adipisci, dolorem numquam blanditiis magnam ea dolore labore.</div>
+<div *ngIf="state===3" style="background-color:lightyellow" class="note">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae neque consequatur error, vel quas nostrum similique
+  delectus incidunt! Nam alias, voluptates ducimus ad ex nulla minima similique sed beatae sequi?</div>
+<div *ngIf="state===0" class="note">No condition matched</div>
+
+<h3>Switch Statement Example</h3>
+
+
+<div [ngSwitch]="state">
+  <div *ngSwitchCase="1" style="background-color:lightblue" class="note">Switch statement for info</div>
+  <div *ngSwitchCase="2" style="background-color:lightgreen" class="note">Switch statement for success</div>
+  <div *ngSwitchCase="3" style="background-color:lightyellow" class="note">Switch statement for warning</div>
+  <div *ngSwitchDefault class="note">No condition matched</div>
+</div>
