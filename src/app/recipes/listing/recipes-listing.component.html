@@ -1,0 +1,19 @@
+<div class="container">
+  <b>
+    Our Recipes
+  </b>
+  <div class="row">
+    <div class="col-4" *ngFor="let r of recipes">
+      <app-recipes-card [recipe]="r"></app-recipes-card>
+    </div>
+
+  </div>
+
+  <b>Favrioute Recepies</b>
+  <div class="row">
+    <div class="col-4" *ngFor="let r of favRecipes">
+      <app-recipes-card [recipe]="r"></app-recipes-card>
+    </div>
+
+  </div>
+</div>
