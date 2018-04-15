@@ -1,7 +1,11 @@
 <div class="card">
   <img class="card-img-top" [src]="recipe.image" alt="Card image cap">
-  <div class="card-body">
+  <div class="card-body" [style.backgroundColor]="background_color">
     <h5 class="card-title">{{recipe.title}}</h5>
     <p class="card-text">{{recipe.description}}</p>
-  </div>
+    <p *ngIf="offer">{{ offer }}</p>
+    <!-- {{background_color}} -->
+    <button (click)="handleFavBtn()" *ngIf="type==1">Add to fav</button>
+    <button (click)="handleRemoveBtn()" *ngIf="type==2">Remove from fav</button>
+  </div> 
 </div>

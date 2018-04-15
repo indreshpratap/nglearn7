@@ -4,7 +4,7 @@
   </b>
   <div class="row">
     <div class="col-4" *ngFor="let r of recipes">
-      <app-recipes-card [recipe]="r"></app-recipes-card>
+      <app-recipes-card type="1" (onAddToFab)="addToFab($event)" [recipe]="r" offer="10% discount" bgcolor="lightyellow"></app-recipes-card>
     </div>
 
   </div>
@@ -12,7 +12,7 @@
   <b>Favrioute Recepies</b>
   <div class="row">
     <div class="col-4" *ngFor="let r of favRecipes">
-      <app-recipes-card [recipe]="r"></app-recipes-card>
+      <app-recipes-card type="2" [recipe]="r" bgcolor="green" (onRemoveFromFab)="removeFromFab($event)"></app-recipes-card>
     </div>
 
   </div>
