@@ -4,16 +4,10 @@
 <b>Content Title</b>
 <p>This is limited info</p>
 <button (click)="toggle()">{{showDetails?'Hide':'View'}} Details</button>
-<p *ngIf="showDetails">
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque eligendi, esse et recusandae modi libero itaque consectetur
-  molestias expedita quae est non suscipit deserunt rem quibusdam laborum provident nulla porro! Lorem ipsum dolor sit amet
-  consectetur adipisicing elit. Quasi, temporibus voluptatibus voluptatum officiis libero quo quis minima, explicabo ad iusto
-  veritatis. Minima velit itaque adipisci aspernatur, placeat suscipit voluptates fuga? Lorem ipsum dolor sit amet consectetur,
-  adipisicing elit. Molestias quaerat dolores iste unde maxime, fuga voluptatibus quidem quibusdam fugiat ducimus, minus
-  necessitatibus voluptas nesciunt consequatur temporibus vitae, harum illo dolorem.
-</p>
+<app-notes *ngIf="showDetails">
+</app-notes>
 
-<button (click)="state=1">Info</button>
+<button (click)="state=1" highlight>Info</button>
 <button (click)="state=2">Success</button>
 <button (click)="state=3">Warning</button>
 <button (click)="state=0">Clear</button>
@@ -25,7 +19,7 @@
   delectus incidunt! Nam alias, voluptates ducimus ad ex nulla minima similique sed beatae sequi?</div>
 <div *ngIf="state===0" class="note">No condition matched</div>
 
-<h3>Switch Statement Example</h3>
+<h3 highlight="tomato">Switch Statement Example</h3>
 
 
 <div [ngSwitch]="state">
@@ -35,7 +29,7 @@
   <div *ngSwitchDefault class="note">No condition matched</div>
 </div>
 
-<div highlight>
+<div highlight="lightgreen">
   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo voluptatum officia fugiat delectus odit tenetur officiis id impedit quidem aut. Quas id nostrum consequuntur iusto corrupti officiis rem quaerat accusamus!
 </div>
 

@@ -11,6 +11,7 @@ import { IfComponent } from './examples/if.component';
 import { HighlightDirective } from './examples/hightlight.directive';
 import { RecipesListingComponent } from './recipes/listing/recipes.listing.component';
 import { RecipesCardComponent } from './recipes/card/recipes-card.component';
+import { NotesComponent } from './notes/notes.component';
 
  
 @NgModule({
@@ -23,7 +24,8 @@ import { RecipesCardComponent } from './recipes/card/recipes-card.component';
     IfComponent,
     HighlightDirective,
     RecipesListingComponent,
-    RecipesCardComponent
+    RecipesCardComponent,
+    NotesComponent
   ],
   imports: [
     BrowserModule,

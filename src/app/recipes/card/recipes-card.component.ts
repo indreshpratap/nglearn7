@@ -14,8 +14,14 @@ export class RecipesCardComponent {
 
   constructor() {
     this.recipe = {};
+    console.log("Recipe card constructor");
   }
 
+
+  ngOnInit(): void {
+   console.log("Recipe card Ng On Init");
+    
+  }
   handleFavBtn(){
       console.log("Yes Fab clicked");
       this.onAddToFab.emit(this.recipe);
