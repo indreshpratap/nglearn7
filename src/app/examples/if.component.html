@@ -4,7 +4,8 @@
 <b>Content Title</b>
 <p>This is limited info</p>
 <button (click)="toggle()">{{showDetails?'Hide':'View'}} Details</button>
-<app-notes *ngIf="showDetails">
+<input type="text" #bgcolor><button (click)="custom_background=bgcolor.value">Change</button>
+<app-notes [tanveer]="custom_background" *ngIf="showDetails">
 </app-notes>
 
 <button (click)="state=1" highlight>Info</button>

@@ -9,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class IfComponent  {
     showDetails = false;
     state = 0;
+
+    custom_background='lightgreen';
     toggle(){
         this.showDetails = !this.showDetails;
     }
