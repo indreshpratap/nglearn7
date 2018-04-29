@@ -6,6 +6,8 @@
 <button (click)="toggle()">{{showDetails?'Hide':'View'}} Details</button>
 <input type="text" #bgcolor><button (click)="custom_background=bgcolor.value">Change</button>
 <app-notes [tanveer]="custom_background" *ngIf="showDetails">
+  <b>This is for primary use</b>
+  <span>this is spab</span>
 </app-notes>
 
 <button (click)="state=1" highlight>Info</button>

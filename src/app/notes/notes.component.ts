@@ -5,8 +5,13 @@ import {
   AfterViewInit,
   OnInit,
   OnDestroy,
-  OnChanges
+  OnChanges,
+  AfterContentInit,
+  ViewChild,
+  ViewChildren,
+  QueryList
 } from "@angular/core";
+import { HighlightDirective } from "../examples/hightlight.directive";
 
 @Component({
   selector: "app-notes",
@@ -14,9 +19,11 @@ import {
   styleUrls: ["./notes.component.css"]
 })
 export class NotesComponent
-  implements OnInit, AfterViewInit, OnDestroy {
+  implements OnInit, AfterViewInit, OnDestroy, AfterContentInit {
   @Input() tanveer;
 
+  @ViewChild("savebtn") savebtnref;
+  @ViewChildren(HighlightDirective) buttons: QueryList<HighlightDirective>;
   constructor() {
     console.log("Notes constructor");
   }
@@ -25,11 +32,17 @@ export class NotesComponent
     console.log("OnChanges", changes);
   }
   ngOnInit() {
+    console.log("save button ref", this.savebtnref.nativeElement.innerHTML);
+    console.log("all buttons", this.buttons);
+
     console.log("Notes ngOnInit");
   }
-
+  ngAfterContentInit(): void {
+    console.log("ngAfterContent Init");
+  }
   ngAfterViewInit() {
     console.log("Everyting is loaded now ngAfterViewInit");
+    console.log("all buttons after view init", this.buttons);
   }
 
   ngOnDestroy(): void {
