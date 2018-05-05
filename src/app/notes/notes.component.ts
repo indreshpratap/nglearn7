@@ -12,6 +12,7 @@ import {
   QueryList
 } from "@angular/core";
 import { HighlightDirective } from "../examples/hightlight.directive";
+import { HelloService } from "../services/hello.service";
 
 @Component({
   selector: "app-notes",
@@ -24,7 +25,8 @@ export class NotesComponent
 
   @ViewChild("savebtn") savebtnref;
   @ViewChildren(HighlightDirective) buttons: QueryList<HighlightDirective>;
-  constructor() {
+  
+  constructor(private hello:HelloService) {
     console.log("Notes constructor");
   }
 
@@ -32,6 +34,7 @@ export class NotesComponent
     console.log("OnChanges", changes);
   }
   ngOnInit() {
+    this.hello.sayHello();
     console.log("save button ref", this.savebtnref.nativeElement.innerHTML);
     console.log("all buttons", this.buttons);
 

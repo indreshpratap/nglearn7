@@ -12,6 +12,7 @@ import { HighlightDirective } from './examples/hightlight.directive';
 import { RecipesListingComponent } from './recipes/listing/recipes.listing.component';
 import { RecipesCardComponent } from './recipes/card/recipes-card.component';
 import { NotesComponent } from './notes/notes.component';
+import { HelloService } from './services/hello.service';
 
  
 @NgModule({
@@ -31,7 +32,7 @@ import { NotesComponent } from './notes/notes.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [HelloService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
